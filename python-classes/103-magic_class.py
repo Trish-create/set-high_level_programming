@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""This module defines the MagicClass."""
 import math
 
 
@@ -6,6 +7,7 @@ class MagicClass:
         """Defines a circle."""
 
         def __init__(self, radius=0):
+            """Initialize the circle with a radius."""
             self.__radius = 0
 
             if type(radius) is not int and type(radius) is not float:
