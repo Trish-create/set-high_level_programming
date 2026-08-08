@@ -3,11 +3,11 @@
 
 
 def add_integer(a, b=98):
-        """Add two integers.
+    """Add two integers.
 
-            Args:
-                a: First number.
-                b: Second number (default is 98).
+    Args:
+    a: First number.
+    b: Second number (default is 98).
 
 Returns:
 The sum of a and b as an integer.
