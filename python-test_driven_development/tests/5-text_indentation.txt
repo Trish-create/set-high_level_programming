@@ -1,0 +1,48 @@
+======================================
+Tests for 5-text_indentation.py module
+======================================
+
+Importing the function:
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+1. Normal text formatting:
+    >>> text = "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet? Lorem ipsum dolor sit amet."
+    >>> text_indentation(text)
+    Lorem ipsum dolor sit amet.
+    <BLANKLINE>
+    Lorem ipsum dolor sit amet?
+    <BLANKLINE>
+    Lorem ipsum dolor sit amet.
+    <BLANKLINE>
+
+2. Handling multiple delimiters and trailing/leading spaces:
+    >>> text_indentation("   Hello: World?  Python.  ")
+    Hello:
+    <BLANKLINE>
+    World?
+    <BLANKLINE>
+    Python.
+    <BLANKLINE>
+
+3. Text without delimiters:
+    >>> text_indentation("No punctuation here")
+    No punctuation here
+
+4. Empty string:
+    >>> text_indentation("")
+
+5. TypeError exceptions (non-string inputs):
+    >>> text_indentation(123)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+    >>> text_indentation(["Lorem", "ipsum"])
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
